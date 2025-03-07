@@ -8,12 +8,12 @@ const STORAGE_KEY = "todoList";
 
 const App: React.FC = () => {
   const [tasks, setTasks] = useState<Todo[]>(() => {
-    const savedTasks = sessionStorage.getItem(STORAGE_KEY);
+    const savedTasks = localStorage.getItem(STORAGE_KEY);
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
 
   useEffect(() => {
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
   }, [tasks]);
 
   const handleAddTodo = (text: string) => {

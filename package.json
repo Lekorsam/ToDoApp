@@ -2,7 +2,7 @@
   "name": "to-do-test-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Lekorsam/ToDoApp.git",
+  "homepage": "https://lekorsam.github.io/ToDoApp/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

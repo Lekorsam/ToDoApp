@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Lekorsam/ToDoApp.git/static/css/main.d530e478.css",
+    "main.js": "/Lekorsam/ToDoApp.git/static/js/main.5ebf5345.js",
+    "index.html": "/Lekorsam/ToDoApp.git/index.html",
+    "main.d530e478.css.map": "/Lekorsam/ToDoApp.git/static/css/main.d530e478.css.map",
+    "main.5ebf5345.js.map": "/Lekorsam/ToDoApp.git/static/js/main.5ebf5345.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d530e478.css",
+    "static/js/main.5ebf5345.js"
+  ]
+}

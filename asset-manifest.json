@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Lekorsam/ToDoApp.git/static/css/main.d530e478.css",
-    "main.js": "/Lekorsam/ToDoApp.git/static/js/main.5ebf5345.js",
-    "index.html": "/Lekorsam/ToDoApp.git/index.html",
-    "main.d530e478.css.map": "/Lekorsam/ToDoApp.git/static/css/main.d530e478.css.map",
-    "main.5ebf5345.js.map": "/Lekorsam/ToDoApp.git/static/js/main.5ebf5345.js.map"
+    "main.css": "/ToDoApp/static/css/main.d530e478.css",
+    "main.js": "/ToDoApp/static/js/main.5ebf5345.js",
+    "index.html": "/ToDoApp/index.html",
+    "main.d530e478.css.map": "/ToDoApp/static/css/main.d530e478.css.map",
+    "main.5ebf5345.js.map": "/ToDoApp/static/js/main.5ebf5345.js.map"
   },
   "entrypoints": [
     "static/css/main.d530e478.css",

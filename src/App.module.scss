@@ -1,0 +1,50 @@
+.app {
+  background: linear-gradient(45deg, #d67918, #5151a5, #658e16, #2553e6,);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  min-width: 400px;
+  text-align: center;
+  font-family: 'Arial';
+  font-size: medium;
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  color: white;
+  margin-bottom: 20px;
+  font-family: 'Lobster';
+  font-size: 3rem;
+}
+
+body {
+  cursor: url('https://www.rw-designer.com/cursor-extern.php?id=102938&name=Neon+Cursor') 16 16, auto;
+}
+
+button, .todoListWrapper {
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

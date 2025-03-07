@@ -1,21 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Todo } from "./types/types";
 import styles from "./App.module.scss";
 import TodoInput from "./components/ToDoInput";
 import TodoList from "./components/ToDoList";
 
+const STORAGE_KEY = "todoList";
+
 const App: React.FC = () => {
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [tasks, setTasks] = useState<Todo[]>(() => {
+    const savedTasks = sessionStorage.getItem(STORAGE_KEY);
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+  }, [tasks]);
 
   const handleAddTodo = (text: string) => {
-    const newTodo: Todo = { id: Date.now(), text, completed: false };
-    setTodos([...todos, newTodo]);
+    const newTask: Todo = { id: Date.now(), text, completed: false };
+    setTasks([...tasks, newTask]);
   };
 
-  const handleToggleCompleted = (id: number) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo,
+  const handleToggleChange = (id: number) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task,
       ),
     );
   };
@@ -24,7 +33,7 @@ const App: React.FC = () => {
     <div className={styles.app}>
       <h1 className={styles.title}>ToDo List</h1>
       <TodoInput onAddTask={handleAddTodo} />
-      <TodoList tasks={todos} onToggleChange={handleToggleCompleted} />
+      <TodoList tasks={tasks} onToggleChange={handleToggleChange} />
     </div>
   );
 };

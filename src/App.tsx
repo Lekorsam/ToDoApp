@@ -29,11 +29,19 @@ const App: React.FC = () => {
     );
   };
 
+  const handleClearAll = () => {
+    setTasks([]);
+  };
+
   return (
     <div className={styles.app}>
       <h1 className={styles.title}>ToDo List</h1>
       <TodoInput onAddTask={handleAddTodo} />
-      <TodoList tasks={tasks} onToggleChange={handleToggleChange} />
+      <TodoList
+        tasks={tasks}
+        onToggleChange={handleToggleChange}
+        clearAllTasks={handleClearAll}
+      />
     </div>
   );
 };
